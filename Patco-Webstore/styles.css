@@ -1,0 +1,919 @@
+/* Load the custom font VTFJustinaHUM-Black */
+@font-face {
+    font-family: 'VTFJustinaHUM-Black';
+    src: url('fonts/VTFJustinaHUM-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General body styling for all pages */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141213;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Logo styling */
+header .logo {
+    width: 240px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Universal Banner Styling */
+.page-banner {
+    font-size: 60pt;
+    color: white;
+    text-align: center;
+    font-family: 'VTFJustinaHUM-Black', sans-serif;
+    font-weight: normal;
+    position: relative;
+    top: -60px; /* Ensures the banners are placed high enough */
+}
+
+/* Home Page - Product Portal Banner Styling */
+.portal-header {
+    font-size: 60pt;
+    margin-top: -60px;
+    color: white;
+    font-family: 'VTFJustinaHUM-Black', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+/* Consistent Banner Styling for All Other Pages */
+.brands-header,
+.products-header,
+.cart-header,
+.about-header,
+.contact-header,
+.profile-header {
+    font-size: 60pt;
+    margin-top: -60px;  /* Match Home page banner */
+    color: white;
+    font-family: 'VTFJustinaHUM-Black', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff !important;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    font-family: 'VTFJustinaHUM-Black', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 0px;
+}
+
+.footer-nav a:not(:last-child)::after {
+    content: "|";
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Top navigation bar styling */
+.top-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'VTFJustinaHUM-Black', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.top-nav .divider {
+    margin: 0 8px;
+    color: white;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust profile and cart link positions */
+.top-nav .profile-link {
+    margin-right: 25px;
+}
+
+.top-nav .cart-link {
+    font-size: 160%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-link:hover {
+    text-decoration: underline;
+}
+
+/* Section styles for Products, Contact, etc. */
+section {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Big Sipz logo styling (Brands Page) */
+.bigsipz-logo {
+    width: 150px;  /* Logo width */
+    position: absolute;
+    left: 2in;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* RLG Logo styling (Brands Page) */
+.rlg-logo {
+    width: 150px;  /* Now matches the size of BigSipzLogo */
+    position: absolute;
+    left: calc(2in + 190px); /* Shifted 40px more to the right */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Contact Form Section (Shift Upwards) */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-form {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+.contact-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+/* Login form section */
+.login-section {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 350px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+    color: #FDF7D0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+/* Forgot Username/Password link styling */
+.forgot-link {
+    color: #FDF7D0 !important;  /* Same color as Username label */
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Login button */
+button.login-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.login-btn:hover {
+    background-color: #218838;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: row;
+    gap: 20px; /* Gap between the boxes */
+}
+
+/* Profile Form Styling for 3 Sections */
+.profile-form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the fields */
+}
+
+/* Labels for the fields */
+.profile-form label {
+    font-size: 16px;
+    color: #FDF7D0;
+    margin-bottom: 8px;
+}
+
+/* Input fields in profile form */
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Section Titles */
+.profile-form h2 {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Adjusting Street Number alignment */
+.profile-form .street-number {
+    width: 86%;
+    margin-right: 0;
+}
+
+/* City, State, Zip code alignment */
+.city-state-zip {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.city-state-zip .city {
+    width: 80%; /* Keep original size */
+    margin-right: 10px;
+}
+
+.city-state-zip .state {
+    width: 30%; /* Keep original size */
+    margin-right: 10px;
+}
+
+.city-state-zip .zip-code {
+    width: 45%; /* Keep original size */
+    margin-bottom: 15px;
+}
+
+.city-state-zip label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Update Profile Button Wrapper */
+.update-profile-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.update-profile-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.update-profile-btn:hover {
+    background-color: #218838;
+}
+
+/* Add Shipping Address Button Styling */
+.add-shipping-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.add-shipping-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.add-shipping-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Cart Section */
+.cart-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.cart-section p {
+    font-size: 20px;
+    color: white;
+}
+
+/* Product images styling - Enlarge sizes */
+.product-image {
+    width: 50%;  /* Reduce size by 50% */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Align the product rows for cleaner layout */
+.product-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* Custom alignment for product images */
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-cups {
+    width: 200%;
+    margin-left: 10%;
+}
+
+.product-jugz {
+    width: 150%;
+    margin-left: 12%;
+    margin-top: 20px;
+}
+
+.product-tetra {
+    width: 200%;
+    margin-right: 10%;
+}
+
+.product-super {
+    width: 150%;
+    margin-top: 20px;
+    margin-right: 12%;
+}
+
+/* Prevent horizontal scroll bars */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
